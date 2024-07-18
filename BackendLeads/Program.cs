@@ -1,4 +1,6 @@
 using BackendLeads.Data;
+using BackendLeads.Service;
+using BackendLeads.Services.Interface;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -22,6 +24,8 @@ builder.Services.AddCors(options =>
     .WithMethods("GET", "PUT", "DELETE", "POST", "PATCH")
     );
 });
+builder.Services.AddScoped<IGestorService, GestorService>();    
+
 
 
 var app = builder.Build();

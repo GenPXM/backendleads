@@ -27,7 +27,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="DTO\" />
     <Folder Include="Identity\" />
     <Folder Include="Utils\" />
     <Folder Include="Service\Interface\" />
