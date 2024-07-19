@@ -11,8 +11,7 @@ namespace BackendLeads.Models
         public string Funcao {  get; set; }
         public string Email { get; set; }
         public string Telefone {  get; set; }
-        public string SenhaHash { get; set; }
-        public string IdLogin { get; set; }
+        
 
     }
 }

@@ -1,4 +1,5 @@
 using BackendLeads.Data;
+using BackendLeads.DTO;
 using BackendLeads.Models;
 using BackendLeads.Service;
 using BackendLeads.Service.Interface;
@@ -9,6 +10,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 
+Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
 var builder = WebApplication.CreateBuilder(args);
 ConfigurationManager configuration = builder.Configuration;
 
@@ -59,10 +61,11 @@ builder.Services.AddCors(options =>
     .WithMethods("GET", "PUT", "DELETE", "POST", "PATCH")
     );
 });
-
+builder.Services.AddScoped<UrlStringDto>();
 builder.Services.AddScoped<IAutenticacaoService, AutenticacaoService>();
 builder.Services.AddScoped<IGestorService, GestorService>();
-
+builder.Services.AddScoped<IRequisicoesApiAutenticacao, ResquisicoesApiService>();
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 
 var app = builder.Build();
