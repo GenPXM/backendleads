@@ -14,10 +14,11 @@ namespace BackendLeads.Controllers
         {
             _gestorService = gestorService;
         }
-        [HttpPost(Name = "CadastrarGestor")]
-        public async Task<RespostaPadrao> Cadastrar([FromBody] GestorDto gestor, string token, string idLogin)
+        [HttpPost]
+        [Route("cadastrarGestor")]
+        public async Task<RespostaPadrao> Cadastrar([FromBody] GestorDto gestor)
         {
-            return await _gestorService.AdicionarGestor(gestor, token, idLogin);
+            return await _gestorService.AdicionarGestor(gestor);
         }
     }
 }

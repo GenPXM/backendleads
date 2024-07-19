@@ -10,7 +10,7 @@ namespace BackendLeads.Services.Interface
         Task<RespostaPadrao> BuscarTodosGestores();
         Task<RespostaPadrao> BuscarPorId(int id);
         Task<RespostaPadrao> BuscarPorCpf(string id);
-        Task<RespostaPadrao> AdicionarGestor(GestorDto gestor, string token, string idLogin);
+        Task<RespostaPadrao> AdicionarGestor(GestorDto gestor);
         Task<RespostaPadrao> Atualizar(GestorAtualizarDto gestor, int id);
         Task<RespostaPadrao> Apagar(int id);
        
