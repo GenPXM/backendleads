@@ -65,6 +65,8 @@ builder.Services.AddScoped<UrlStringDto>();
 builder.Services.AddScoped<IAutenticacaoService, AutenticacaoService>();
 builder.Services.AddScoped<IGestorService, GestorService>();
 builder.Services.AddScoped<IRequisicoesApiAutenticacao, ResquisicoesApiService>();
+builder.Services.AddScoped<ILeadsService, LeadsService>();
+builder.Services.AddScoped<IEnderecoService, EnderecoService>();    
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 

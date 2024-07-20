@@ -7,7 +7,7 @@ namespace BackendLeads.Models
     {
         [JsonIgnore]
         public int Id { get; set; }
-        public int EnderecoId { get; set; }
+       
         public string Nome { get; set; }
         [Required]
         public string Cpf { get; set; }
@@ -15,7 +15,9 @@ namespace BackendLeads.Models
         public string  Telefone { get; set; }
         [JsonIgnore]
         public DateTime DataRealizacao { get; set; }
-        public virtual List<Endereco>? Enderecos { get; set; }
+        public int EnderecoId { get; set; }
+        public virtual Endereco Endereco { get; set; }
+
 
     }
 }

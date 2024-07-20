@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using System.Reflection.Emit;
 
 namespace BackendLeads.Data
 {
@@ -28,17 +29,19 @@ namespace BackendLeads.Data
             builder.Entity<Leads>()
                 .HasIndex(a => a.Cpf)
                 .IsUnique();
+
             builder.Entity<Leads>()
                .HasIndex(a => a.Email)
                .IsUnique();
+
             builder.Entity<Leads>()
               .HasIndex(a => a.Telefone)
               .IsUnique();
 
             builder.Entity<Leads>()
-                .HasMany(a => a.Enderecos)
-                .WithOne(b => b.Lead)
-                .HasForeignKey(a => a.LeadsId);
+               .HasOne(l => l.Endereco)
+               .WithOne(e => e.Lead)
+               .HasForeignKey<Leads>(l => l.EnderecoId);
         }
     }
 }
