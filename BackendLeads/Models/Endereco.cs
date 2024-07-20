@@ -6,8 +6,6 @@ namespace BackendLeads.Models
     {
         [JsonIgnore]
         public int Id { get; set; }
-        [JsonIgnore]
-        public int LeadsId { get; set; }
         public string Rua { get; set; }
         public string Bairro { get; set; }
         public string Numero { get; set;}

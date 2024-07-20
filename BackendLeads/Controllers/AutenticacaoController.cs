@@ -27,7 +27,7 @@ namespace BackendLeads.Controllers
         [Authorize(Roles = "AdminGestor")]
         [HttpPost]
         [Route("cadastrarLeads")]
-        public async Task<RespostaPadrao> RegistrarAluno([FromBody] CadastrarUsuarioDto model)
+        public async Task<RespostaPadrao> RegistrarLeads([FromBody] CadastrarUsuarioDto model)
         {
 
             return await _autenticacaoService.RegistrarLeads(model);

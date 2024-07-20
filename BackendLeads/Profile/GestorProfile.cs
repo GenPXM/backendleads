@@ -6,11 +6,11 @@ namespace BackendLeads.Profiles
 {
     public class GestorProfile : Profile
     {
-        public GestorProfile() 
+        public GestorProfile()
         {
             CreateMap<GestorDto, Gestor>();
-            
-                    
+            CreateMap<LeadsDto, Leads>();
+
         }
     }
 }
