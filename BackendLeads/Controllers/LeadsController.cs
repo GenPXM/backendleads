@@ -21,5 +21,35 @@ namespace BackendLeads.Controllers
         {
             return await _leadsService.AdicionarLeads(leadsDto);
         }
+        [HttpGet]
+        [Route("listarLeads")]
+        public async Task<RespostaPadrao> ListarLeads()
+        {
+            return await _leadsService.BuscarTodosLeads();
+        }
+        [HttpGet]
+        [Route("listarPorIdLeads")]
+        public async Task<RespostaPadrao> ListarLeadsId(int id)
+        {
+            return await _leadsService.BuscarPorId(id);
+        }
+        [HttpGet]
+        [Route("listarPorCpfLeads")]
+        public async Task<RespostaPadrao> ListarLeadsCpf(string cpf)
+        {
+            return await _leadsService.BuscarPorCpf(cpf);
+        }
+        [HttpPut]
+        [Route("atualizarLeads")]
+        public async Task<RespostaPadrao> AtualizarLeads(LeadsAtualizarDto leadsAtualizarDto, int id)
+        {
+            return await _leadsService.AtualizarLeads(leadsAtualizarDto, id);
+        }
+        [HttpDelete]
+        [Route("deletarLeads")]
+        public async Task<RespostaPadrao> DeletarLeads(int id)
+        {
+            return await _leadsService.ApagarLeads(id);
+        }
     }
 }

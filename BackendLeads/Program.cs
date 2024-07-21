@@ -1,6 +1,7 @@
 using BackendLeads.Data;
 using BackendLeads.DTO;
 using BackendLeads.Models;
+using BackendLeads.Profiles;
 using BackendLeads.Service;
 using BackendLeads.Service.Interface;
 using BackendLeads.Services.Interface;
@@ -65,9 +66,9 @@ builder.Services.AddScoped<UrlStringDto>();
 builder.Services.AddScoped<IAutenticacaoService, AutenticacaoService>();
 builder.Services.AddScoped<IGestorService, GestorService>();
 builder.Services.AddScoped<IRequisicoesApiAutenticacao, ResquisicoesApiService>();
-builder.Services.AddScoped<ILeadsService, LeadsService>();
-builder.Services.AddScoped<IEnderecoService, EnderecoService>();    
+builder.Services.AddScoped<ILeadsService, LeadsService>(); 
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+builder.Services.AddAutoMapper(typeof(GestorProfile));
 
 
 var app = builder.Build();
