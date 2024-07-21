@@ -5,6 +5,9 @@
         public int Codigo { get; set; }
         public string Resposta { get; set; }
         public object? Retorno { get; set; }
+        public bool Sucesso { get; private set; }
+        public string Mensagem { get; private set; }
+        public object Dados { get; private set; }
 
         public RespostaPadrao()
         {
@@ -178,6 +181,12 @@
             Codigo = 200;
             Resposta = Resposta + ". " + mensagem;
             Retorno = dado;
+        }
+        public void SetSuccess(string mensagem, object dado)
+        {
+            Sucesso = true;
+            Mensagem = mensagem;
+            Dados = dado;
         }
     }
 }

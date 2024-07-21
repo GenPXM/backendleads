@@ -14,7 +14,7 @@ namespace BackendLeads.Data
 
         public DbSet<Gestor> Gestores { get; set; }
         public DbSet<Leads> Leads { get; set; }
-        public DbSet<Endereco> Enderecos { get; set; }
+        //public DbSet<Endereco> Enderecos { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
@@ -38,10 +38,7 @@ namespace BackendLeads.Data
               .HasIndex(a => a.Telefone)
               .IsUnique();
 
-            builder.Entity<Leads>()
-               .HasOne(l => l.Endereco)
-               .WithOne(e => e.Lead)
-               .HasForeignKey<Leads>(l => l.EnderecoId);
+            
         }
     }
 }
