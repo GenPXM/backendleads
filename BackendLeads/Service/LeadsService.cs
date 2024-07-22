@@ -34,6 +34,12 @@ namespace BackendLeads.Service
             }
             try
             {
+                bool cpfExists = await _DbContext.Leads.AnyAsync(l => l.Cpf == leads.Cpf);
+                if (cpfExists)
+                {
+                    resposta.SetChamadaInvalida("O CPF já está cadastrado.");
+                    return resposta;
+                }
                 CadastrarUsuarioDto cadastrarUsuarioDto = new CadastrarUsuarioDto();
                 var nome = leads.Nome.Replace(" ", "");
                 leadsDto.Nome = RemoveAcentos(nome);

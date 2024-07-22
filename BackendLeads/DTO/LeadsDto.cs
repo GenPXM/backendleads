@@ -4,7 +4,8 @@ using System.ComponentModel.DataAnnotations;
 namespace BackendLeads.DTO
 {
     public class LeadsDto
-    { 
+    {  
+        public int Id { get; set; }
         public string? Nome { get; set; }
         [Required]
         public string? Cpf { get; set; }
