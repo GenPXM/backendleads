@@ -8,7 +8,7 @@ namespace BackendLeads.Profiles
     {
         public GestorProfile()
         {
-            CreateMap<Gestor, GestorDto>();
+            CreateMap<GestorDto,Gestor >();
             CreateMap<Leads, LeadsDto>();
             CreateMap<LeadsAtualizarDto, Leads>();
 
