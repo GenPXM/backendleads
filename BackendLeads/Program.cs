@@ -16,15 +16,12 @@ Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
 var builder = WebApplication.CreateBuilder(args);
 ConfigurationManager configuration = builder.Configuration;
 
-// Add services to the container.
 
-// For Identity
 builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
     .AddEntityFrameworkStores<AppDbContext>()
     .AddSignInManager<SignInManager<ApplicationUser>>()
     .AddDefaultTokenProviders();
 
-// Adding Authentication
 builder.Services.AddAuthentication(options =>
 {
     options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -43,7 +40,7 @@ builder.Services.AddAuthentication(options =>
             ValidIssuer = configuration["JWT:ValidIssuer"],
             IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["JWT:Secret"])),
             ValidateLifetime = true,
-            ClockSkew = TimeSpan.Zero // Adicione isso se não quiser tolerância para a expiração do token
+            ClockSkew = TimeSpan.Zero 
         };
     });
 
