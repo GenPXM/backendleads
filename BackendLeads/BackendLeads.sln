@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34723.18
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackendLeads", "BackendLeads.csproj", "{B7C925F3-4696-4FB5-810C-AFAEDA507038}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BackendLeads", "BackendLeads.csproj", "{B7C925F3-4696-4FB5-810C-AFAEDA507038}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackendLeadsTests", "..\BackendLeadsTests\BackendLeadsTests.csproj", "{48BFDFAB-904C-4AD0-B70D-2D1A73A5435C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,14 @@ Global
 		{B7C925F3-4696-4FB5-810C-AFAEDA507038}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B7C925F3-4696-4FB5-810C-AFAEDA507038}.Release|x64.ActiveCfg = Release|x64
 		{B7C925F3-4696-4FB5-810C-AFAEDA507038}.Release|x64.Build.0 = Release|x64
+		{48BFDFAB-904C-4AD0-B70D-2D1A73A5435C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48BFDFAB-904C-4AD0-B70D-2D1A73A5435C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48BFDFAB-904C-4AD0-B70D-2D1A73A5435C}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{48BFDFAB-904C-4AD0-B70D-2D1A73A5435C}.Debug|x64.Build.0 = Debug|Any CPU
+		{48BFDFAB-904C-4AD0-B70D-2D1A73A5435C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48BFDFAB-904C-4AD0-B70D-2D1A73A5435C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48BFDFAB-904C-4AD0-B70D-2D1A73A5435C}.Release|x64.ActiveCfg = Release|Any CPU
+		{48BFDFAB-904C-4AD0-B70D-2D1A73A5435C}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
