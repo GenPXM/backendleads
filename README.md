@@ -1,4 +1,27 @@
 # backendleads
+-Para clonar o repositorio digite git clone https://gitlab.com/leads550029/backendleads.git
+
+#Abra a pasta raiz e abra a pasta BackendLeads , e dentro dela localize e abra BackendLeads.sln
+-Feito isso vá na aba de pesquisar e procure por Console do Gerenciador de Pacotes
+-Agora suba as migrations com o comando "Add-Migrations NomeDaMigrations"
+-No Sql Server conecte no banco local "(localdb)\MSSQLLocaldb" tem que ser essa string de conexão.
+-Após terminar as migrations, de o comando "update-database" para atualizar o banco de dados.
+
+#Execução do projeto
+-Agora execute o projeto com "IIS Express" isso mantera o localhost "https://localhost:44369/"
+
+#Sweggar 
+-No Sweggar ira aparecer todos os endpoints de requisições. 
+
+****IMPORTANTE*** QUANDO FOR CADASTRAR UMA PESSOA NO Autenticacao/cadastrar O USERNAME TEM QUE SER SOMENTE O PRIMEIRO NOME 
+POR EXEMPLO : "Genilson" não pode ser "Genilson Peixoto" 
+
+****IMPORTANTE*** NO FRONTEND A OPÇÃO DE Autenticacao/cadastrar FICA EM SIGN UP , LA VOCÊ JÁ PODE CADASTRAR DIRETO O GESTOR E FAZER LOGIN LOGO APÓS O CADASTRO E EFETUAR OS CADASTROS DOS LEADS 
+
+
+
+
+
 
 
 
