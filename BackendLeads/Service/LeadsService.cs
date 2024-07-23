@@ -187,7 +187,26 @@ namespace BackendLeads.Service
                 _DbContext.Leads.Remove(lead);
                 await _DbContext.SaveChangesAsync();
 
-                resposta.SetSucesso("Lead apagado com sucesso.",lead);
+                resposta.SetSucesso("Lead apagado com sucesso.", lead);
+                return resposta;
+            }
+            catch (Exception ex)
+            {
+                resposta.SetBadRequest(ex.Message);
+                return resposta;
+            }
+        }
+        public async Task<RespostaPadrao> VerificarCpfExistente(string cpf)
+        {
+            RespostaPadrao resposta = new RespostaPadrao();
+            try
+            {
+                var lead = await _DbContext.Leads.AnyAsync(l => l.Cpf == cpf);
+                if (lead == true)
+                {
+                    resposta.SetChamadaInvalida("Já possuei Lead com esse Cpf!");
+                    return resposta;
+                }
                 return resposta;
             }
             catch (Exception ex)

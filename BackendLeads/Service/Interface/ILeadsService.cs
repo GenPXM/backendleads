@@ -11,5 +11,6 @@ namespace BackendLeads.Service.Interface
         Task<RespostaPadrao> AdicionarLeads(LeadsDto leadsDto);
         Task<RespostaPadrao> AtualizarLeads(LeadsAtualizarDto leadsAtualizar, int id);
         Task<RespostaPadrao> ApagarLeads(int id);
+        Task<RespostaPadrao> VerificarCpfExistente(string cpf);
     }
 }
