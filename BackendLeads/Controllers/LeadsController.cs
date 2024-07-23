@@ -1,8 +1,10 @@
-﻿using BackendLeads.DTO;
+﻿using BackendLeads.Data;
+using BackendLeads.DTO;
 using BackendLeads.Service.Interface;
 using BackendLeads.Services.Interface;
 using BackendLeads.Utils;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace BackendLeads.Controllers
 {
@@ -10,6 +12,7 @@ namespace BackendLeads.Controllers
     [Route("[controller]")]
     public class LeadsController : Controller
     {
+        private readonly AppDbContext _DbContext;
         private readonly ILeadsService _leadsService;
         public LeadsController(ILeadsService leadsService)
         {
@@ -51,5 +54,12 @@ namespace BackendLeads.Controllers
         {
             return await _leadsService.ApagarLeads(id);
         }
+        [HttpGet("verificarCpfLeads")]
+        public async Task<RespostaPadrao> VerificarCpfLead([FromQuery] string cpf)
+        {
+            var resposta = await _leadsService.VerificarCpfExistente(cpf);
+            return resposta;
+        }
+
     }
 }
