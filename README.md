@@ -10,10 +10,8 @@
 #Execução do projeto
 -Agora execute o projeto com "IIS Express" isso mantera o localhost "https://localhost:44369/"
 
-#Sweggar 
--No Sweggar ira aparecer todos os endpoints de requisições. 
 
-****IMPORTANTE*** QUANDO FOR CADASTRAR UMA PESSOA NO Autenticacao/cadastrar O USERNAME TEM QUE SER SOMENTE O PRIMEIRO NOME 
+****IMPORTANTE*** QUANDO FOR CADASTRAR UMA PESSOA NO SIGN UP DO FRONTEND "Autenticacao/cadastrar" O USERNAME/NOME TEM QUE SER SOMENTE O PRIMEIRO NOME 
 POR EXEMPLO : "Genilson" não pode ser "Genilson Peixoto" 
 
 ****IMPORTANTE*** NO FRONTEND A OPÇÃO DE Autenticacao/cadastrar FICA EM SIGN UP , LA VOCÊ JÁ PODE CADASTRAR DIRETO O GESTOR E FAZER LOGIN LOGO APÓS O CADASTRO E EFETUAR OS CADASTROS DOS LEADS 
