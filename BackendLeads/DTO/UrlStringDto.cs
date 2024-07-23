@@ -2,6 +2,6 @@
 {
     public class UrlStringDto
     {
-        public string Identity { get; set; }
+        public string? Identity { get; set; }
     }
 }
